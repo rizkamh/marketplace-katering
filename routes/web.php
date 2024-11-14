@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CustomerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +26,5 @@ use App\Http\Controllers\MerchantController;
 Route::post('/merchant/register', [MerchantController::class, 'register']);
 Route::post('/merchant/login', [MerchantController::class, 'login']);
 Route::post('/merchant/menu/add', [MerchantController::class, 'addMenu']);
+Route::resource('products', ProductController::class);
+Route::resource('customers', CustomerController::class);
