@@ -16,3 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// routes/web.php
+
+use App\Http\Controllers\MerchantController;
+
+Route::post('/merchant/register', [MerchantController::class, 'register']);
+Route::post('/merchant/login', [MerchantController::class, 'login']);
+Route::post('/merchant/menu/add', [MerchantController::class, 'addMenu']);
